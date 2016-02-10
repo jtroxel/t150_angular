@@ -1,0 +1,37 @@
+<ion-view title="Results" ng-controller="ResultsCtrl">
+  <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <div class="list card">
+      <stopwatch time="sharedTime"></stopwatch>
+    </div>
+    <form class="list">
+
+      <div class="item " >
+        <input type="text" placeholder="Reps (10)" style="float:left;">
+        <button class="button button-stable   icon-right ion-android-add"></button>
+        <button class="button button-stable   icon-left ion-android-remove"></button>
+      </div>
+      <div class="item " >
+        <input type="text" placeholder="Weight (35)" style="float:left;">
+        <button class="button button-stable   icon-right ion-android-add"></button>
+        <button class="button button-stable   icon-left ion-android-remove"></button>
+      </div>
+      <div class="item list-item button-bar">
+        <button class="button button-stable icon-left ion-play" ng-click="startEx();">Start</button>
+        <button class="button button-stable icon-left ion-android-checkmark-circle" ng-click="stopEx();">Done</button>
+      </div>
+      <label class="item item-input">
+        <textarea placeholder="Notes"> </textarea>
+      </label>
+    </form>
+    <a href="#/side-menu21/instructions" class="button button-stable button-block ">Next (E2) &gt;</a>
+  </ion-content>
+</ion-view>
+<script type="text/ng-template" id="stopwatch.html">
+  <div><h1>{{swctrl.getElapsedMs() | date:'mm:ss'}}</h1></div>
+  <div style="float: right;">
+    <!--<button id="start" class="btn btn-success btn-stable ion-play" ng-click="swctrl.start()"></button>-->
+    <button id="stop" class="button button-stable ion-ios-pause" ng-click="swctrl.stop()"></button>
+    <button id="reset" class="button button-stable ion-refresh" ng-click="swctrl.reset()"></button>
+  </div>
+  <div style="float: left">{{currentTime | date:'h:mm a'}}</div>
+</script>
