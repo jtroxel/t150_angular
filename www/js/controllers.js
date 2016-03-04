@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
     }
     $scope.stopEx = function() {
       $rootScope.$broadcast('timer.stop',{});
-      //$state.go('app.instructions');
+      $state.go('app.instructions');
     }
   })
 
