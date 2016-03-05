@@ -53,6 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
         url: '/results',
         views: {
           'menuContent': {
+            controller: 'ResultsCtrl',
             templateUrl: 'templates/results.html'
           }
         }
@@ -62,25 +63,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives']
         views: {
           'menuContent': {
             templateUrl: 'templates/workout.html'
-          }
-        }
-      })
-      .state('app.playlists', {
-        url: '/playlists',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
-          }
-        }
-      })
-
-      .state('app.single', {
-        url: '/playlists/:playlistId',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/playlist.html',
-            controller: 'PlaylistCtrl'
           }
         }
       });
